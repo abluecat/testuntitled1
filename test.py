@@ -159,8 +159,7 @@ f1, f2, f3 = fun()
 f1()
 
 #%%
-l=map(lambda x: x * x, [1, 2, 3])
+l = map(lambda x: x * x, [1, 2, 3])
 list(l)
-
 
 #%%
