@@ -135,6 +135,7 @@ def fun(*args):
         for x in args:
             n = n + x
         return n
+<<<<<<< HEAD
 
     return fun1
 
@@ -164,3 +165,23 @@ list(l)
 
 
 #%%
+=======
+    return fun1
+
+fun(1,2,3)
+
+#%%
+def fun():
+    l=[]
+    for i in range(1,4):
+        def f():
+            j=i*i
+            return j
+        l.append(f)
+    return l
+
+f1,f2,f3=fun()
+f1()
+
+#%%
+>>>>>>> feb8ea5e306ad1cba70b9dfc36eeca1b10ea8449
