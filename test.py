@@ -163,3 +163,16 @@ l = map(lambda x: x * x, [1, 2, 3])
 list(l)
 
 #%%
+
+def log(func):
+    def fun(*args,**agrs1):
+        print('funciton:%s' %func.__name__)
+        return func(*args,**agrs1)
+    return fun
+
+@log
+def now():
+    print('2019-10-01')
+
+now()
+#%%
