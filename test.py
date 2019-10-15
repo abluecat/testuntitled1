@@ -76,7 +76,7 @@ def _not_divisible(n):
     return lambda x: x % n != 0
 
 
-def primes():
+def primes_1():
     yield 2
     it = _odd_iter()  # 初始序列
     while True:
@@ -86,7 +86,7 @@ def primes():
 
 
 # 打印1000以内的素数:
-for n in primes():
+for n in primes_1():
     if n < 1000:
         print(n)
     else:
@@ -182,6 +182,31 @@ now()
 #%%
 
 int('123')
-int('123',base=16)
+int('123', base=16)
+print(bin(123))
+import functools
+int2 = functools.partial(int, base=2)
+int2('100')
+#%%
+
+#命令行运行，加参数
+'a test on module'
+import sys
+
+
+def fun():
+    args = sys.argv
+    if len(args) == 1:
+        print('hello,world')
+    elif len(args) == 2:
+        print('hello,%s' % args[1])
+    else:
+        print('too many argments')
+
+
+fun()
+l=sys.argv
+for i in l:
+    print(i)
 
 #%%
