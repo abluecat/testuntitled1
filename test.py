@@ -241,8 +241,9 @@ stu1 = Student('xiaoming', 90)
 stu1._Student__score = 95
 stu1.print_score()
 print(stu1._Student__name)
-print(hasattr(stu1,'name'))
-getattr(stu1,'name')
+print(hasattr(stu1, 'name'))
+getattr(stu1, 'name')
+
 
 # %%
 class Animal():
@@ -264,43 +265,57 @@ animal1.run()
 animal2.run()
 animal2.fun1()
 
-print(type(animal1),'***')
+print(type(animal1), '***')
 print(isinstance(animal1, Animal))
 print(isinstance(animal2, Animal))
 print(dir(Animal))
-print(hasattr(animal1,'name'))
-print(hasattr(animal1,'run'))
-print(hasattr(stu1,'name'))
+print(hasattr(animal1, 'name'))
+print(hasattr(animal1, 'run'))
+print(hasattr(stu1, 'name'))
+
+
 # getattr(stu1,'name')
 # %%
 class Student():
-    count=0
-    def __init__(self,name):
-        self.name=name
-        Student.count+=1
-stu1=Student('xiaoming')
-stu2=Student('xiaohong')
+    count = 0
+
+    def __init__(self, name):
+        self.name = name
+        Student.count += 1
+
+
+stu1 = Student('xiaoming')
+stu2 = Student('xiaohong')
 print(stu1.count)
+
+
 # %%
 class Student():
-    __slots__=('name','age')
-stu1=Student()
-stu1.name='xiaoming'
+    __slots__ = ('name', 'age')
+
+
+stu1 = Student()
+stu1.name = 'xiaoming'
 print(stu1.name)
+
 # print(stu1.age)
 # stu1.score=90
+
 
 # %%
 class Student():
     @property
     def score(self):
         return self._score
+
     @score.setter
-    def score(self,age):
-        if age<100 and age>0:
-            self._score=age
-stu1=Student()
-stu1.score=90
+    def score(self, age):
+        if age < 100 and age > 0:
+            self._score = age
+
+
+stu1 = Student()
+stu1.score = 90
 print(stu1.score)
 
 # %%
